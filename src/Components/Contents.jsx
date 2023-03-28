@@ -157,7 +157,7 @@ export default function Contents() {
             <Stack flex={2} sx={{background: "#FFFFFF",border: "1px solid #D9D9D9",borderRadius: "20px"}}>
                 <Calendar />
             </Stack>
-            <Stack flex={1} sx={{backgroundColor:"#FFFFFF",border:"1px solid #D9D9D9",borderRadius:"20px",maxHeight:"400px",p:1}} backgroundColor="violet" justifyContent={"center"}>
+            <Stack flex={1} sx={{backgroundColor:"#FFFFFF",border:"1px solid #D9D9D9",borderRadius:"20px",maxHeight:"500px",p:1}} backgroundColor="violet" justifyContent={"center"}>
                 <Typography fontSize={"1.3rem"} fontWeight={"500"} color={"#001B33"}>
                     Top 10 Most Frequent Failures
                 </Typography>
