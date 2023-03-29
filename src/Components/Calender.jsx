@@ -1,9 +1,11 @@
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
+import interactionPlugin from '@fullcalendar/interaction'
 import { Typography } from '@mui/material'
 
 const events = [
-  { title: 'Meeting', start: new Date() }
+  { title: 'Meeting', start: new Date(), color:"red" }
 ]
 
 export default function Calender() {
@@ -11,17 +13,21 @@ export default function Calender() {
     <div>
       <Typography fontSize={"1.3rem"} fontWeight={"500"} color={"#001B33"}>AI-Assisted PM Scheduler</Typography>
       <FullCalendar
-        plugins={[dayGridPlugin]}
+        plugins={[dayGridPlugin,timeGridPlugin,interactionPlugin]}
         initialView='dayGridMonth'
-        weekends={false}
+        headerToolbar={{
+          start: 'prev,next today', 
+          center: 'title',
+          end: 'dayGridMonth,timeGridWeek,timeGridDay'
+        }}
         events={events}
+        editable={true}
         eventContent={renderEventContent}
       />
     </div>
   )
 }
 
-// a custom render function
 function renderEventContent(eventInfo) {
   return (
     <>

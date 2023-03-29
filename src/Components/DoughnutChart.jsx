@@ -1,7 +1,7 @@
 import { CChart } from "@coreui/react-chartjs";
 
 export default function DoughnutChart(props) {
-    const { data, bgColors, labels, rotation=0, aspectRatio=2.5 } = props;
+    const { data, bgColors, labels, rotation=0, aspectRatio=1 } = props;
     const isSingle = data.length>1;
     return (
         <CChart

@@ -34,7 +34,7 @@ export default function Contents() {
     ]
     return (
     <Stack direction={"row"} sx={{height:"100%", gap:2, backgroundColor:"#FCFCFC", py:4}}>
-        <Stack flex={2} marginLeft="34px" gap={3}>
+        <Stack flex={2} marginLeft="10px" gap={3}>
             <Stack flex={2} gap={3}>
                 <Stack direction={"row"} height="100%" width="100%" gap={3}>
                     <Stack flex={1}>
@@ -92,10 +92,11 @@ export default function Contents() {
                         </Typography>
                     </Stack>
                 </Stack>
-                <Stack direction={"row"} height="100%" width="100%" divider={<Divider sx={{borderColor:"#D9D9D9"}} orientation="vertical" flexItem />} sx={{ py:2, backgroundColor: "#FFFFFF", border: "1px solid #D9D9D9", borderRadius: "20px"}}>
-                    <Stack height="100%" width="100%" justifyContent={"center"}>
+                <Stack direction={"row"} height="100%" width="100%" justifyContent={"space-around"} divider={<Divider sx={{borderColor:"#D9D9D9"}} orientation="vertical" flexItem />} sx={{ py:2, backgroundColor: "#FFFFFF", border: "1px solid #D9D9D9", borderRadius: "20px"}}>
+                    <Stack height="100%" width="100%" justifyContent={"center"} maxWidth="250px">
                         {/* By MM Team */}
                         <DoughnutChart 
+                            aspectRatio={2}
                             rotation={100}
                             data={[7, 67, 26]} 
                             bgColors={['#BB3B8A', '#9A277D', '#781C74']} 
@@ -103,9 +104,10 @@ export default function Contents() {
                         />
                         {/* By MM Team */}                    
                     </Stack>
-                    <Stack height="100%" width="100%" justifyContent={"center"}>
+                    <Stack height="100%" width="100%" justifyContent={"center"} maxWidth="300px">
                         {/* Hot Work */}
                         <DoughnutChart 
+                            aspectRatio={2}
                             rotation={100}
                             data={[7, 67, 26]} 
                             bgColors={['#BB3B8A', '#D55A9A', '#E57CA5']} 
@@ -113,9 +115,10 @@ export default function Contents() {
                         />
                         {/* Hot Work */}  
                     </Stack>
-                    <Stack height="100%" width="100%" justifyContent={"center"}>
+                    <Stack height="100%" width="100%" justifyContent={"center"} maxWidth="250px">
                         {/* WIP */}
                         <DoughnutChart 
+                            aspectRatio={2}
                             rotation={100}
                             data={[7, 67, 26]} 
                             bgColors={['#5256B8', '#787AC4', '#A8AAD6']} 
@@ -153,8 +156,8 @@ export default function Contents() {
                 <BarChart data={barChartData} labels={['TATA 1918.K','Tata Hyva 2518','TATA LPK 3118','TATA Prima 2518','Tata 5530.S','Tata FL 5589','TATA 2456','Site 8']} />
             </Stack>
         </Stack>
-        <Stack flex={1} gap={2}>
-            <Stack flex={2} sx={{background: "#FFFFFF",border: "1px solid #D9D9D9",borderRadius: "20px"}}>
+        <Stack flex={1} gap={2} minWidth="500px">
+            <Stack flex={2} padding="10px" sx={{background: "#FFFFFF",border: "1px solid #D9D9D9",borderRadius: "20px"}}>
                 <Calendar />
             </Stack>
             <Stack flex={1} sx={{backgroundColor:"#FFFFFF",border:"1px solid #D9D9D9",borderRadius:"20px",maxHeight:"500px",p:1}} backgroundColor="violet" justifyContent={"center"}>
